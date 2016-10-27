@@ -1,0 +1,503 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+@media screen and (min-width: 0px) {
+    body {
+        background-color:red;
+    }
+}
+*/
+
+html{
+  height:100%;
+  border: 1px none blue;
+}
+
+body
+{
+margin: auto;
+overflow : hidden;
+cursor: default;
+font-family: Arial;
+font-size:16px;
+border:	1px none green;
+width:95%;
+height:100%;
+opacity:0;
+}
+
+#message
+{
+	position: absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	top: 10%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index:999999;
+	font-size:24px;
+	color:orange;
+	display:none;
+	text-align:center;
+	font-style:italic;
+}
+
+.span_message
+{
+	background-color : rgba(255,255,255,0.3);
+}
+
+.blur
+{
+-webkit-filter: blur(15px); /* Chrome, Safari, Opera */
+filter: blur(15px);
+opacity:0.5;
+}
+
+.invisible, .username
+{
+display:none;	
+}
+
+.visible
+{
+display:block;	
+}
+
+.transparent
+{
+opacity:0;	
+}
+
+.opaque
+{
+opacity:1;	
+}
+
+.position_absolute
+{
+position: absolute;	
+}
+
+#loading_message
+{
+display:none;
+border: 1px blue none;
+position: absolute;	
+}
+
+/* PARTIE INFORMATIONS ET AUTEURS */
+
+
+#subscribe_login_button
+{
+width:8%;
+}
+
+nav
+{
+position:relative;
+margin:auto;
+text-align: right;
+border: 1px blue none;
+width:92%;
+
+}
+
+nav h3
+{
+
+display: inline-block;
+vertical-align: top;
+margin-left:20px;
+border: 1px blue none;
+font-weight: bold;
+font-size: 18px;
+cursor: pointer;
+}
+
+.menu_text_block
+{
+position: relative;
+margin-top:25px;
+text-align:left;
+border: 1px red none;
+overflow: auto;
+display:none;
+}
+/*
+#menu_chapters_cache
+{
+position: absolute;
+border:3px black none; 
+background-color: white;
+opacity:0; 
+z-index:100;
+width:100%;
+height:10%;
+overflow:hidden;
+}*/
+
+#menu_chapters, #menu_schemas
+{
+position: absolute;
+background-color: white;  
+z-index:100;
+width:100%;
+/*height:135%;*/
+overflow-x: scroll;
+overflow-y: hidden;
+white-space: nowrap;
+opacity:0;
+}
+
+#menu_schemas
+{
+	height:15%;
+}
+
+#menu_schemas
+{
+	bottom:0%;
+}
+
+@media screen and (max-device-width: 400px) {
+	#menu_chapters
+	{
+		opacity:1;
+		display:none;
+	}
+	#menu_schemas
+	{
+		opacity:1;
+		display:none;
+	}
+}
+
+#arrow_left_window_child{
+  position: absolute;
+  top: 50%; /* poussé de la moitié de hauteur du référent */
+  border:1px red none;
+  font-family: Trebuchet MS;
+}
+
+#arrow_left_window{
+    position: absolute;
+	top:0px;
+	left:0px;
+	width:20%;
+	height:100%;
+	border: 1px none blue;
+	color: orange;
+	font-weight: bold;
+	opacity: 0;
+	z-index:-1;
+	
+}​
+
+
+
+#join_contact
+{
+position:relative;
+margin-right:10px;
+text-align:right;
+border: 1px green none;
+}
+
+.menu_join_contact
+{
+display: inline-block;
+vertical-align: top;
+border: 1px green none;
+}
+
+
+/* PARTIE IDEO */
+
+
+
+
+#index
+{
+	border: 1px white none; /* attention il faut laisser un border meme s'il est vide (enfin blanc quoi), car sinon il y a une sorte de bug avec badnote*/
+	display:none;
+}
+
+#div_img_riposte
+{
+width:100%;
+text-align:center;
+}
+
+
+#post_these
+{
+position:absolute;
+opacity:0.6;
+right:15%;
+bottom:15%;
+z-index:99999;
+font-style:italic;
+font-weight:bold;
+text-align:center;
+}
+
+#post_these_arrow
+{
+position:absolute;
+left:70%;
+top:-50%;
+}
+
+#post_these p
+{
+opacity:0;
+}
+
+#ideo
+{
+position:relative;
+width:100%;
+height:100%;
+}
+
+#integral_txt_cache
+{
+width:100%;
+height:100%;
+border:1px orange none;		
+overflow:hidden;
+}
+
+#integral_txt
+{
+width:100%;
+height:100%;
+border:1px orange none;
+padding:0px 40px 40px 0px; 
+overflow:scroll;		
+}
+
+#index
+{
+height: 75%;
+overflow:scroll;
+border: 1px none pink;
+}
+
+#theses
+{
+position:absolute;
+border: 1px violet none; 
+z-index:99999;
+top:90%;
+}
+
+#integral_txt h1
+{
+font-size:38px;
+text-align: center;		
+}
+
+#integral_txt h2
+
+{
+font-size:25px;
+}
+
+.symbole_sch
+{
+font-size: 24px;
+color: orange;
+}
+
+#sch
+{
+	display:none;
+	border: 1px blue none;
+	width:100%;
+	height:100%;
+	text-align: center;
+	position: relative;
+}
+
+.sch
+{
+
+	cursor:pointer;
+}
+.img
+{
+	font-style: italic; 
+	border: 1px red none;
+	width:100%;
+	display:none; 
+	margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+
+}
+
+@media screen and (max-width: 768px) {
+    #sch
+	{
+		margin-top: inherit; /* poussé de la moitié de hauteur de viewport */
+		-moz-transform: inherit;
+		-webkit-transform: inherit;
+		-ms-transform: inherit;
+		-o-transform: inherit;
+		transform: inherit;
+    }
+	.img
+	{
+		margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		border: 2px yellow none;
+	}
+}
+
+.schema
+{
+border: 1px green none;
+width:97%;	
+}
+
+#integral_txt em
+
+{
+font-style: italic;		
+}
+
+#integral_txt p, #integral_txt em 
+{
+font-size: 1em;
+}
+
+#integral_txt .align_left
+
+{
+display: inline-block;	
+vertical-align:top;		
+}
+
+#integral_txt .align_right
+
+{
+/* il faut placer le width dans l'attribut style de chaque élément ayant cette classe pour que chacun ait sa propre width, car si on met la width ici, elle sera commune pour tous, ce qui n'est pas le but recherché*/
+text-align: right;
+display: inline-block;
+vertical-align:top;		
+}
+
+#integral_txt .center
+
+{
+text-align: center;		
+
+}
+
+
+
+.schema_description
+{
+	border: 1px orange none;
+	position: relative;
+}
+
+
+
+.button_th_td_no_mobile:hover{
+color: orange;
+font-weight: bold;
+}
+
+.button{
+font-size:16px;
+}
+
+ .title_chapter, .title_schema{
+font-size:23px;
+display: inline-block;
+vertical-align: middle;
+margin-right:30px;
+}
+
+.button:hover{
+color: orange;
+font-weight: bold;
+}
+
+.button_chapter:hover{
+color: orange;
+}
+.button_schema:hover{
+color: orange;
+}
+
+.button_2
+{
+border : 1px red none;
+}
+
+.button_2:hover{
+font-weight: bold;
+}
+
+
+#help_box
+{
+background-color: white;
+position:absolute;
+top:0px;
+display:none;
+/*padding-left : 10px;
+padding-right : 10px;*/
+border: 8px orange groove;
+font-weight:bold;
+text-align:justify;
+/*max-width: 300px;*/
+z-index:99999;
+margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+
+
+.help_box_content_config_for_mobile
+{
+	padding-left:10px;
+	padding-right:10px;
+	margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+	border: 1px red groove;
+}
+
+#dictionnary
+{
+display:none;
+}
+
+.definition
+{
+text-decoration: underline;
+}
+
+.definition:hover
+{
+color:orange;
+}
+
+
+#img_cursor
+{
+position:absolute;
+width:175px;
+display:none;
+}

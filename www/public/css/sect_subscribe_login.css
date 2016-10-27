@@ -1,0 +1,792 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+@media screen and (min-width: 0px) {
+    body {
+        background-color:red;
+    }
+}
+*/
+
+html{
+  height:100%;
+  border: 1px none blue;
+  overflow : hidden;
+}
+
+body
+{
+margin: auto;
+overflow : hidden;
+cursor: default;
+font-family: Arial;
+font-size:15px;
+border:	1px none green;
+width:95%;
+height:100%;
+opacity:0;
+}
+
+#message
+{
+	position: absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	top: 10%;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index:999999;
+	font-size:24px;
+	color:orange;
+	display:none;
+	text-align:center;
+	font-style:italic;
+}
+
+.span_message
+{
+	background-color : rgba(255,255,255,0.3);
+}
+
+.blur
+{
+-webkit-filter: blur(15px); /* Chrome, Safari, Opera */
+filter: blur(15px);
+opacity:0.5;
+}
+
+.invisible, .username
+{
+display:none;	
+}
+
+.visible
+{
+display:block;	
+}
+
+.transparent
+{
+opacity:0;	
+}
+
+.opaque
+{
+opacity:1;	
+}
+
+.position_absolute
+{
+position: absolute;	
+}
+
+#loading_message
+{
+display:none;
+border: 1px blue none;
+position: absolute;	
+}
+
+#version_site
+{
+border: 1px violet none; 
+width:100%;
+top:95%;
+text-align:center;
+width:inherit;
+position:fixed;
+}
+
+#version_site span
+{
+border: 1px violet none; 
+z-index:99999;
+font-size:14px;
+font-style:italic;
+}
+
+/*PARTIE INSCRIPTION-LOGIN*/
+
+#div_subscribe_login
+{border:3px white solid; /*oui il faut mettre le border meme si en apparence ca ne change rien, sinon il y a un bug avec le swipe pour revenir sur l'index*/
+position:relative;
+width:100%;
+height:100%;
+top:0;
+bottom:0;
+margin:auto;
+
+}
+
+#login_form, #subscribe_form
+{
+	width:80%;
+	border:1px red none;
+	top:0;
+	bottom:0;
+	margin:auto;
+	margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#subscribe_form
+{
+width:30%;
+}
+
+@media screen and (max-device-width: 768px) {
+	#subscribe_form
+	{
+		width:80%;
+	}
+	input
+	{
+		width:100%;
+	}
+	#version_site
+	{
+		display:none;
+	}
+}
+
+
+#subscribe_form >input, p, div
+{
+display:block;
+margin-bottom : 10px;
+}
+
+#to_check
+{
+margin-left:15px;
+transform: scale(2);
+}
+
+#send_subscribe
+{
+font-size:25px;
+float:right;
+}
+
+#forgot_pass
+{
+position:fixed;
+display:none;
+}
+
+#login_div > .connection
+{
+position:relative;
+display:inline-block;
+}
+
+#forgot_pass > .connection
+{
+position:relative;
+display:inline-block;
+}
+
+.connection
+{
+font-size:24px;
+}
+
+.button_login, .button_chapter{
+font-size:24px;
+display:table;
+}
+
+.button_login:hover{
+color: orange;
+font-weight: bold;
+cursor:pointer;
+}
+
+
+
+/* PARTIE BADNOTE */
+.forename:focus, .name:focus, .t_forename:focus, .t_name:focus {
+outline: none;
+}
+
+#badnote input
+{
+background-color:rgba(0,0,0,0);
+}
+
+
+#badnote {
+
+border:	1px none yellow;
+-webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+-webkit-user-select: none;
+margin:auto;
+cursor:text;
+text-align:center;
+width:100%;
+height:100%;
+display:none;
+}
+
+#badnote_name_data
+{
+	border:1px none grey;
+	display:none;
+	margin:auto;
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+#table_container
+{
+
+	border:3px none orange;
+	margin:auto;
+	text-align:center;
+	margin-top:1%;
+	position:relative; /*si on enleve le relative, le z-index ne marche pas*/
+	z-index:99999;
+	height:auto;
+	font-size:14px;
+	background-color: rgba(255,255,255,1);
+}
+
+@media screen and (min-width: 401px) /* taille intermediaire*/
+{
+	#table_container
+	{
+		width:35%;
+		border:3px none orange;
+	}
+
+	.badnote_name_data
+	{
+		width:30%;
+	}
+}
+
+@media screen and (min-width: 768px) /* taille d'un desktop ou mobile horizontal*/
+{
+	#table_container
+	{
+		width:20%;
+		border:3px none orange;
+	}
+
+	.badnote_name_data
+	{
+		width:17%;
+	}
+}
+
+@media screen and (max-width: 400px) /* taille d'un mobile vertical*/
+{
+	#table_container
+	{
+		width:80%;
+	}
+
+	.badnote_name_data
+	{
+		width:60%;
+		border:3px none red;
+	}
+}			
+			
+@media screen and (max-device-width: 768px) {
+	#table_container
+	{
+		margin-top:10%;
+	}
+
+}
+
+table{
+width: 100%; /*ce width est une variable selon la taille de l'ecran (si l'on est sur ordi ou sur mobile)*/
+display:none;
+position:relative; /*si on enleve le relative, le z-index ne marche pas*/
+border: 2px blue none;
+font-size:11px;
+}
+/*
+@media screen and (max-height: 384px) { /*si le mobile est en mode horizontal il faut diminuer la taille de la police sinon la table depassera de sa bonne dimension*/ 
+	/*table
+	{
+		
+	}
+}*/
+
+tr
+{
+border:1px none green;
+}
+
+th, td{
+width:7%;
+border : 1.75px yellow none;
+text-align : center;
+}
+
+.button_th_td_no_mobile:hover{
+color: orange;
+font-weight: bold;
+}
+
+.button, .button_chapter{
+font-size:16px;
+}
+
+.button:hover{
+color: orange;
+font-weight: bold;
+}
+
+.button_chapter:hover{
+color: orange;
+}
+
+.button_2
+{
+border : 1px red none;
+}
+
+.button_2:hover{
+font-weight: bold;
+}
+
+.badnote_off
+{
+position:relative;
+z-index: 10000;
+}
+
+.badnote_form, .badnote_form_copy
+{
+position:absolute;
+border:2px none green;
+margin:auto;
+width:640px;
+opacity:0;
+}
+
+
+
+.badnote_form_male, .badnote_form_male_copy, .badnote_form_fem, .badnote_form_fem_copy, .badnote_form_male_fem_and_copy
+{
+display:inline-block;
+width: 310px;
+margin:0px; 
+border:1px none blue;
+
+}
+
+#list_of_names_shortcut_suggestion
+{
+position:absolute;
+border:6px none green;
+margin:auto;
+padding-top:80px;
+width:640px;
+opacity:1;
+color:grey;
+font-size:13px;
+z-index:-10;
+}
+
+@media screen and (max-width: 768px) {
+	.badnote_form, .badnote_form_copy
+	{
+	position:absolute;
+	border:2px none green;
+	margin:auto;
+	width:310px;
+	opacity:0;
+	}
+
+	.badnote_form_male, .badnote_form_male_copy, .badnote_form_fem, .badnote_form_fem_copy, .badnote_form_male_fem_and_copy
+	{
+		display:block;
+	}
+
+	#list_of_names_shortcut_suggestion
+	{
+		position:absolute;
+		border:2px none green;
+		padding-top:0px;
+		width:310px;
+		opacity:1;
+		z-index:9999999;
+	}
+	
+	#forename_suggestion, #name_suggestion
+	{
+		position:relative;
+		top: 30px;
+		opacity:1;
+	}
+	
+	#t_forename_suggestion, #t_name_suggestion
+	{
+		position:relative;
+		top: 70px;
+		opacity:1;
+	}			
+}
+
+.badnote_male_and_fem, .badnote_male_and_fem_copy
+{
+border:3px none red;
+margin:auto;
+display: inline-block;
+width:auto;
+
+}
+
+.forename, .name, .t_forename, .t_name, .forename_copy, .name_copy, .t_forename_copy, .t_name_copy, .names_suggestion
+{
+display:inline-block; 
+width: 150px;
+margin:0px; 
+border: 1px orange none;
+text-align:left;
+}
+
+
+.badnote_name_data
+{
+border:1px none pink;
+margin:auto;
+height:70px;
+position:absolute;
+text-align:center;
+left: 50%;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+bottom:3%;
+z-index:999999;
+}
+
+
+
+.badnote_male_and_fem_data
+{
+position:absolute;
+width: 100%;
+border:3px none red;
+margin:auto;
+
+}
+
+.badnote_form_male_data
+{
+position:absolute;
+width: 100%;
+margin:0px; 
+border:1px none blue;
+
+}
+
+.badnote_form_fem_data
+{
+position:absolute;
+width: 100%;
+margin:0px;
+border:1px none blue;
+
+}
+
+.forename_data
+{
+position:absolute;
+width:auto;
+border: 5px orange none;
+left: 0;
+text-align:center;
+}
+
+.t_forename_data
+{
+position:absolute;
+width:auto;
+border: 5px orange none;
+right: 0;
+text-align:center;
+}
+
+
+.forename_data_content
+{
+position:relative;
+left:calc(-50% + 12.5px); /*le 12.5 correspond a 25px/2 car 25px correspond en fait a la largeur de l'image de l'oeil (donc si par la suite on change la largeur de cette image, il faudra donc changer aussi cette valeur)*/
+border: 3px blue none;
+text-align:center;
+}
+
+.t_forename_data_content
+{
+position:relative;
+right:calc(-50% + 12.5px);/*le 12.5 correspond a 25px/2 car 25px correspond en fait a la largeur de l'image de l'oeil (donc si par la suite on change la largeur de cette image, il faudra donc changer aussi cette valeur)*/
+border: 6px blue none;
+text-align:center;
+}
+
+/*
+.eye_container_male_data
+{
+position:absolute;
+width:100%;
+margin:0px;
+border: 3px grey none;
+text-align:left;
+}
+
+.eye_container_fem_data
+{
+position:absolute;
+width:100%;
+margin:0px;
+border: 3px grey none;
+text-align:right;
+}
+*/
+.eye_male_data, .eye_fem_data
+{
+margin:0px;
+width:auto;
+border: 4px green none;
+}
+
+.eye_data
+{
+opacity:0;
+}
+
+.eye_container, .eye_container_copy
+{
+display: inline-block;
+width:100%;
+margin:auto;
+border: 3px grey none;
+}
+
+.eye_male, .eye_male_copy, .eye_fem, .eye_fem_copy
+{
+display: block;
+position: relative;
+left: -60px;
+width:auto;
+margin:auto;
+border: 4px green none;
+}
+
+
+
+#crown
+{
+position:relative;
+color:yellow;
+overflow: hidden;
+font-size:16px;
+width:100%; /*LA VALEUR DE WIDTH SUIVANTE EST A UTILISER SI ON VEUT DIMINUER UN PEU LA WIDTH DE LA COURONNE EN PRENANT EN COMPTE LA WIDTH DES YEUX (DE 25px)*/
+/*width:calc(100% - 25px);25px correspond en fait a la largeur de l'image de l'oeil (donc si par la suite on change la largeur de cette image, il faudra donc changer aussi cette valeur)*/
+margin:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+}
+
+#help_box
+{
+background-color: white;
+position:absolute;
+top:0px;
+display:none;
+/*padding-left : 10px;
+padding-right : 10px;*/
+border: 8px orange groove;
+font-weight:bold;
+text-align:justify;
+/*max-width: 300px;*/
+z-index:99999;
+margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+
+
+.help_box_content_config_for_mobile
+{
+	padding-left:10px;
+	padding-right:10px;
+	margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+	transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+	border: 1px red groove;
+}
+
+#dictionnary
+{
+display:none;
+}
+
+.definition
+{
+text-decoration: underline;
+}
+
+.definition:hover
+{
+color:orange;
+}
+
+
+
+/*PARTIE GEOLOCATION*/
+
+#map_and_tools_of_map
+{
+position:absolute;
+height: auto;
+margin:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+z-index:99999;
+border: 1px none blue;
+margin-top:1%;
+display:none;
+}
+
+@media screen and (max-width: 400px) 
+{
+	#map_and_tools_of_map
+	{
+		width:75%;
+		/*height: ; le height est configure en javascript*/
+	}
+}
+
+@media screen and (min-width: 401px) 
+{
+	#map_and_tools_of_map
+	{
+		width:40%;
+		/*height: ; le height est configure en javascript*/
+	}
+}
+
+
+
+#map
+{
+position: relative;
+border: 1px red none;
+border-radius: 8px 8px 8px 8px;
+background-color:grey;
+/*display:none;*/
+margin: auto;
+left:0px;
+right:0px;
+
+
+}
+
+
+
+.map_tool
+{
+vertical-align: top;
+border: 1px red none;
+display:inline-block;
+}
+
+.left_of_map, .right_of_map
+{
+position:relative;
+width:17%;
+text-align:center;
+}
+
+#unite_name_input, #enemy_name_input
+{
+position:relative;
+width:98%;
+z-index:99999;
+}
+
+.allies
+{
+color:#000059;
+}
+
+.enemies
+{
+color:#B20000;
+}
+
+@media screen and (max-width: 400px) {
+	#map
+	{
+		width:100%;
+		margin: auto;
+		left:0px;
+		right:0px;
+	}
+
+	.right_of_map
+	{
+	float:right;
+	}
+	#map_and_tools_of_map
+	{
+	width:75%;
+	}
+}
+
+
+@media screen and (min-width: 401px) {
+	#map
+	{
+		width:60%;
+		margin: auto;
+		left:0px;
+		right:0px;
+	}
+	.right_of_map
+	{
+	float:none;
+	}
+	#map_and_tools_of_map
+	{
+		width:40%;
+	}
+}
+#arrow_left_window_child{  /* il faut que les deux div d'arrow soient placés en dernier, sinon bizarrement ca fait des bugs (le css des éléments qui suivent ne sont parfois plus activés) !*/
+  position: absolute;
+  top: 50%; /* poussé de la moitié de hauteur du référent */
+  border:1px red none;
+  font-family: Trebuchet MS;
+}
+
+#arrow_left_window{
+    position: absolute;
+	top:0px;
+	left:0px;
+	width:40px;
+	height:100%;
+	border: 1px none blue;
+	color: orange;
+	font-weight: bold;
+	opacity: 0;
+	z-index:-1;
+	
+}​
